@@ -1,6 +1,15 @@
 codecov:
   require_ci_to_pass: yes
 
+comment:
+  layout: "diff"
+  behavior: once
+  require_changes: true
+  require_base: yes
+  require_head: yes
+  branches:
+    - "main"
+
 coverage:
   status:
     project:
@@ -12,7 +21,7 @@ coverage:
       source:
         paths:
           - "./"
-        target: 97%
+        target: 90%
         threshold: 0.002
     patch:
       default:
