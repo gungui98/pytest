@@ -1,0 +1,19 @@
+codecov:
+  require_ci_to_pass: yes
+
+coverage:
+  status:
+    project:
+      default: false
+      tests:
+        paths:
+          - "test/"
+        target: 100%
+      source:
+        paths:
+          - "./"
+        target: 97%
+        threshold: 0.002
+    patch:
+      default:
+        target: 80%
