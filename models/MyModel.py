@@ -1,6 +1,6 @@
 class Number:
     def __int__(self):
-        pass
+        print("done init")
 
     def plus(self, a, b):
         return a + b
