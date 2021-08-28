@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -34,3 +33,11 @@ jobs:
           pip install pytest-cov
           pytest --cov=./ --cov-report=xml
           codecov
+
+  train:
+    runs-on: self-hosted
+    container: gungui/deep-learning-cuda:latest
+    steps:
+      - name: Test container
+        run: |
+        python test_cuda.py
