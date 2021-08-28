@@ -40,4 +40,4 @@ jobs:
     steps:
       - name: Test container
         run: |
-        python test_cuda.py
+          python test_cuda.py
