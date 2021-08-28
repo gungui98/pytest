@@ -35,7 +35,7 @@ jobs:
           codecov
 
   train:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux]
     container: gungui/deep-learning-cuda:latest
     steps:
       - name: Test container
