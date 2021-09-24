@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build:
+    if: contains(github.event.pull_request.labels.*.name, 'bug')
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,13 +34,3 @@ jobs:
           pip install pytest-cov
           pytest --cov=./ --cov-report=xml
           codecov
-
-  train:
-
-    runs-on: [self-hosted, linux]
-    container: gungui/deep-learning-cuda:latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Test container
-        run: |
-          python cuda.py

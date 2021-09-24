@@ -39,6 +39,10 @@ RUN pip3 install fastapi
 RUN pip3 install scikit-build
 RUN pip3 install --upgrade pip
 RUN pip3 install opencv-python>=4.1.2
+RUN pip3 install pytorch-lightning
+
+RUN sudo apt-get install -y git
+RUN apt install -y libgl1-mesa-glx
 
 RUN ln -s /usr/bin/python3 /usr/bin/python & \
     ln -s /usr/bin/pip3 /usr/bin/pip
